@@ -6,9 +6,20 @@
 	<script src="./Yadom.js"></script>
 </head>
 <body>
-	
+	<div class="main">
+		<section>
+			<ul id="my-ul">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</section>
+	</div>
 </body>
 <script>
 	Y.ajax();
+	console.log(Y('#my-ul').css('color','#f90'));
 </script>
 </html>
