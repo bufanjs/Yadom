@@ -29,7 +29,7 @@
                 for (var i = 0; i < emt.length; i++) {
                     this[i] = emt[i];
                 }
-                console.log(emt.length);
+                // console.log(emt.length);
                 this.selector = selector;
                 this.length = emt.length;
                 return this;
@@ -37,12 +37,23 @@
 
         },
         css: function(attr, val) {
-            console.log(this.length);
+            // console.log(this.length);
             for (var i = 0; i < this.length; i++) {
                 if (arguments.length === 1) {
                     return getComputedStyle(this[i], null)[attr];
                 }
                 this[i].style[attr] = val;
+            }
+            return this;
+        },
+        hasClass: function(cls) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            for (var i = 0; i < this.length; i++) {
+                if (this[i].clssName.match(reg)) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
             return this;
         }
