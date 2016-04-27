@@ -49,10 +49,19 @@
         hasClass: function(cls) {
             var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
             for (var i = 0; i < this.length; i++) {
-                if (this[i].clssName.match(reg)) {
+                if (this[i].className.match(reg)) {
                     return true;
                 } else {
                     return false;
+                }
+            }
+            return this;
+        },
+        addClass: function(cls) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            for (var i = 0; i < this.length; i++) {
+                if (!this[i].className.match(reg)) {
+                    this[i].className += ' ' + cls;
                 }
             }
             return this;

@@ -8,7 +8,7 @@
 <body>
 	<div class="main">
 		<section>
-			<ul id="my-ul">
+			<ul id="my-ul" class="test">
 				<li>1</li>
 				<li>2</li>
 				<li>3</li>
@@ -20,7 +20,7 @@
 </body>
 <script>
 	Y.ajax();
-	console.log(Y('#my-ul').css('color','#f90'));
-	console.log(Y('.main').hasClass('main'));
+	console.log(Y('#my-ul').hasClass('test'));
+	Y('#my-ul').addClass('addtest');
 </script>
 </html>
