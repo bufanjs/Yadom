@@ -1,1 +1,4 @@
 # Yadom
++ css
++ hasClass
++ addClass
