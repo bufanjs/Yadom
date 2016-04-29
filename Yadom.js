@@ -1,7 +1,7 @@
-(function(window, document) {
+(function (window, document) {
     var w = window,
         doc = document;
-    var Ya = function(selector) {
+    var Ya = function (selector) {
         return Ya.prototype.init(selector);
     };
     Ya.prototype = {
@@ -9,7 +9,7 @@
         length: 0,
         splice: [].splice,
         selector: '',
-        init: function(selector) {
+        init: function (selector) {
             //dom判断
             if (!selector) {
                 return this;
@@ -36,7 +36,7 @@
             }
 
         },
-        css: function(attr, val) {
+        css: function (attr, val) {
             // console.log(this.length);
             for (var i = 0; i < this.length; i++) {
                 if (arguments.length === 1) {
@@ -46,7 +46,7 @@
             }
             return this;
         },
-        hasClass: function(cls) {
+        hasClass: function (cls) {
             var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
             for (var i = 0; i < this.length; i++) {
                 if (this[i].className.match(reg)) {
@@ -57,7 +57,7 @@
             }
             return this;
         },
-        addClass: function(cls) {
+        addClass: function (cls) {
             var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
             for (var i = 0; i < this.length; i++) {
                 if (!this[i].className.match(reg)) {
@@ -66,7 +66,7 @@
             }
             return this;
         },
-        removeClass: function(cls) {
+        removeClass: function (cls) {
             var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
             for (var i = 0; i < this.length; i++) {
                 if (this[i].className.match(reg)) {
@@ -77,7 +77,7 @@
         }
     };
     Ya.prototype.init.prototype = Ya.prototype;
-    Ya.ajax = function() {
+    Ya.ajax = function () {
         console.log('ajax');
     };
     window.Y = Ya;
